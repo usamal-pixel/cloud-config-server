@@ -1,1 +1,19 @@
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+     hostname: localhost  
+
+microservice:
+   payment-service:
+      end-points:
+         end-point:
+         uri: http://PAYMENT-SERVICE/payment/doPaymen
+         
+   order-service:
+      end-points:
+         end-point:
+         uri: http://ORDER-SERVICE/order/bookOrder
+
